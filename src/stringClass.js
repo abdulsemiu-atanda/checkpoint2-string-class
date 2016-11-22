@@ -46,7 +46,7 @@ const stringClass = {
   numberWords() { },
 
   isDigit() {
-    return /^\d{1}$/g.test(this);
+    return /^\d$/g.test(this);
   },
 
   doubleCheck() {
