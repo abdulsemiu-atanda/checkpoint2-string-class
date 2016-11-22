@@ -16,6 +16,11 @@
   "dependencies": {
     "browserify": "^13.1.1",
     "eslint": "^3.10.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-run": "^1.7.1",
@@ -29,11 +34,6 @@
   },
   "devDependencies": {
     "eslint": "^3.10.2",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-config-airbnb-base": "^10.0.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.7.1",
     "karma-browserify": "^5.1.0",
     "watchify": "^3.7.0"
   }
