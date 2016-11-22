@@ -16,7 +16,7 @@ describe('To Uppercase', () => {
   });
 
   it('should be able to handle characters', () => {
-    expect('rhy$th#?m'.toUpper()).toEqual('RHYTHM');
+    expect('rhy$th#?m'.toUpper()).toEqual('RHY$TH#?M');
   });
 });
 
@@ -26,7 +26,7 @@ describe('To Lowercase', () => {
   });
 
   it('should be able to handle characters', () => {
-    expect('RHY$TH#?M'.toLower()).toEqual('rhythm');
+    expect('RHY$TH#?M'.toLower()).toEqual('rhy$th#?m');
   });
 });
 
@@ -36,7 +36,7 @@ describe('Uc First', () => {
   });
 
   it('should be able to handle characters', () => {
-    expect('rhy$th#?m'.ucFirst()).toEqual('Rhythm');
+    expect('rhy$th#?m'.ucFirst()).toEqual('Rhy$th#?m');
   });
 });
 
@@ -56,13 +56,13 @@ describe('Words', () => {
   });
 
   it('should return array if string contains multiple words', () => {
-    expect(Array.isArray('sheila is awesome at her job'.words())).toBeFalsy();
+    expect(Array.isArray('sheila is awesome at her job'.words())).toBeTruthy();
   });
 });
 
 describe('Words count', () => {
   it('should return number of words in a string', () => {
-    expect(typeof 'sheila is awesome at her job'.wordCount()).toEqual(6);
+    expect('sheila is awesome at her job'.wordCount()).toEqual(6);
   });
 
   it('should be able to handle special characters', () => {
