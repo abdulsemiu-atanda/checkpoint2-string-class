@@ -35,7 +35,7 @@ const stringClass = {
 
   inverseCase() {
     return this.replace(/\w/g, (character) =>
-      /[a-z]/.test(character) ? character.toUpper() : character.toLower()
+    /[a-z]/.test(character) ? character.toUpper() : character.toLower()
     );
   },
 
@@ -45,9 +45,13 @@ const stringClass = {
 
   numberWords() { },
 
-  isDigit() { },
+  isDigit() {
+    return /^\d{1}$/g.test(this);
+  },
 
-  doubleCheck() { },
+  doubleCheck() {
+    return /(.)\1{1}/.test(this);
+  },
 };
 
 Object.assign(String.prototype, stringClass);
