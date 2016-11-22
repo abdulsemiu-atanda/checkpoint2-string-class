@@ -17,7 +17,6 @@
     "no-param-reassign": 0,
     "comma-dangle": 0,
     "curly": [2, "multi-line"],
-    "no-shadow": [2, { "allow": ["req", "res", "err"] }],
     "valid-jsdoc": [2, {
       "requireReturn": true,
       "requireReturnType": true,
@@ -25,11 +24,11 @@
       "requireReturnDescription": true
     }],
     "require-jsdoc": [2, {
-        "require": {
-            "FunctionDeclaration": true,
-            "MethodDefinition": true,
-            "ClassDeclaration": true
-        }
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": true
+      }
     }]
   }
 }

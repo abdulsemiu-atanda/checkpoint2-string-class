@@ -74,11 +74,15 @@ describe('To Currency', () => {
   it('should return string in currency format', () => {
     expect('20003.67'.toCurrency()).toEqual('20,003.67');
   });
+
+  it('should return string in currency format with decimal', () => {
+    expect('20003'.toCurrency()).toEqual('20,003.00');
+  });
 });
 
 describe('From Currency', () => {
   it('should return string in number format', () => {
-    expect('20,003.67'.toCurrency()).toEqual('20003.67');
+    expect('20,003.67'.fromCurrency()).toEqual('20003.67');
   });
 });
 

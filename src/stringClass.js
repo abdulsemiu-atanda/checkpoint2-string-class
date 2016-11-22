@@ -31,12 +31,26 @@ const stringClass = {
     return this.words().length;
   },
 
-  toCurrency() { },
+  toCurrency() {
+    const digits = this.split(/\./);
+    digits[1] = digits[1] || '00';
+    digits[0] = digits[0].split('').reverse().join('')
+      .replace(/\d{3}/, value => `${value},`)
+      .split('')
+      .reverse()
+      .join('');
+    return `${digits[0]}.${digits[1]}`;
+  },
+
+  fromCurrency() {
+    return this.replace(/,/g, '');
+  },
 
   inverseCase() {
-    return this.replace(/\w/g, (character) =>
-    /[a-z]/.test(character) ? character.toUpper() : character.toLower()
-    );
+    return this.replace(/\w/g, (character) => {
+      return /[a-z]/
+        .test(character) ? character.toUpper() : character.toLower();
+    });
   },
 
   alternatingCase() { },
