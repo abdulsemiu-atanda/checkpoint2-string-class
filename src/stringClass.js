@@ -47,17 +47,36 @@ const stringClass = {
   },
 
   inverseCase() {
-    return this.replace(/\w/g, (character) => {
-      return /[a-z]/
-        .test(character) ? character.toUpper() : character.toLower();
-    });
+    return this.replace(/\w/g, (character) => /[a-z]/
+        .test(character) ? character.toUpper() : character.toLower());
   },
 
-  alternatingCase() { },
+  alternatingCase() {
+    return this.replace(/\w/g, (word, i) => (i + 1) % 2 === 0 ?
+    word.toUpper() : word.toLower());
+  },
 
-  getMiddle() { },
+  getMiddle() {
+    const middle = this.length / 2;
+    return middle === parseInt(middle, 10) ?
+    this.substr(middle - 1, 2) : this.charAt(middle);
+  },
 
-  numberWords() { },
+  numberWords() {
+    const numWords = {
+      0: 'zero',
+      1: 'one',
+      2: 'two',
+      3: 'three',
+      4: 'four',
+      5: 'five',
+      6: 'six',
+      7: 'seven',
+      8: 'eight',
+      9: 'nine'
+    };
+    return this.replace(/[0-9]/g, digit => `${numWords[digit]} `).trim();
+  },
 
   isDigit() {
     return /^\d$/g.test(this);

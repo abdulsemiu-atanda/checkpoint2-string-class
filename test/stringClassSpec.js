@@ -99,8 +99,12 @@ describe('Alternating case', () => {
 });
 
 describe('Get Middle', () => {
-  it('should return character at the middle of string', () => {
-    expect('read'.getMiddle()).toEqual('a');
+  it('should return character at the middle of string if odd', () => {
+    expect('ready'.getMiddle()).toEqual('a');
+  });
+
+  it('should return two character at the middle of string if even', () => {
+    expect('read'.getMiddle()).toEqual('ea');
   });
 });
 
