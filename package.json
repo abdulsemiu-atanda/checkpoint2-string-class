@@ -13,7 +13,7 @@
   ],
   "author": "Atanda Abdulsemiu",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^3.10.1",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-config-airbnb-base": "^10.0.1",
@@ -30,12 +30,9 @@
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.0.2",
     "karma-verbose-reporter": "0.0.3",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "devDependencies": {
+    "vinyl-source-stream": "^1.1.0",
     "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.15",
-    "eslint": "^3.10.2",
     "watchify": "^3.7.0"
   }
 }
