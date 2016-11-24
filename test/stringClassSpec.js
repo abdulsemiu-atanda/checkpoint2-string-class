@@ -1,5 +1,3 @@
-require('../src/stringClass');
-
 describe('Has Vowels', () => {
   it('should return true if string contains vowels', () => {
     expect('sheila'.hasVowels()).toBeTruthy();

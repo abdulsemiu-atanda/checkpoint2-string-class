@@ -4,7 +4,7 @@
   "description": "String manipulation using prototype oriented programming",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/karma/bin/karma start karma.conf.js --single-run"
+    "test": "gulp test"
   },
   "keywords": [
     "string",
@@ -14,10 +14,9 @@
   "author": "Atanda Abdulsemiu",
   "license": "ISC",
   "dependencies": {
-    "browserify": "^13.1.1",
     "eslint": "^3.10.1",
-    "eslint-config-airbnb-base": "^10.0.1",
     "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.7.1",
@@ -30,13 +29,13 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.0.2",
-    "karma-verbose-reporter": "0.0.3"
+    "karma-verbose-reporter": "0.0.3",
+    "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.15",
     "eslint": "^3.10.2",
-    "karma-browserify": "^5.1.0",
     "watchify": "^3.7.0"
   }
 }
