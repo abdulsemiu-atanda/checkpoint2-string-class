@@ -1,8 +1,6 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
-const source = require('vinyl-source-stream');
 const run = require('gulp-run');
-const browserify = require('browserify');
 
 gulp.task('watch', () => {
   gulp.watch('src/*.js', ['reload']);
