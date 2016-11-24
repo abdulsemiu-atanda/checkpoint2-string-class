@@ -130,4 +130,8 @@ describe('Double Check', () => {
   it('should return false if character does not repeat', () => {
     expect('a'.doubleCheck()).toBeFalsy();
   });
+
+  it('should return true for double whitespaces', () => {
+    expect('  '.doubleCheck()).toBeTruthy();
+  });
 });
