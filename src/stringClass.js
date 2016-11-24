@@ -3,31 +3,88 @@ const stringClass = {
     return /[aeiou]/.test(this);
   },
 
-  toUpper() { },
+  toUpper() {
+    return this.replace(/[a-z]/g, caps =>
+      String.fromCharCode(caps.charCodeAt(0) - 32)
+    );
+  },
 
-  toLower() { },
+  toLower() {
+    return this.replace(/[A-Z]/g, lower =>
+      String.fromCharCode(lower.charCodeAt(0) + 32)
+    );
+  },
 
-  ucFirst() { },
+  ucFirst() {
+    return this.replace(this[0], this[0].toUpper());
+  },
 
-  isQuestion() { },
+  isQuestion() {
+    return /\?$/.test(this);
+  },
 
-  words() { },
+  words() {
+    return this.replace(/[^\w\s]/g, '').split(/\s+/);
+  },
 
-  wordCount() { },
+  wordCount() {
+    return this.words().length;
+  },
 
-  toCurrency() { },
+  toCurrency() {
+    const digits = this.split(/\./);
+    digits[1] = digits[1] || '00';
+    digits[0] = digits[0].split('').reverse().join('')
+      .replace(/\d{3}/, value => `${value},`)
+      .split('')
+      .reverse()
+      .join('');
+    return `${digits[0]}.${digits[1]}`;
+  },
 
-  inverseCase() { },
+  fromCurrency() {
+    return this.replace(/,/g, '');
+  },
 
-  alternatingCase() { },
+  inverseCase() {
+    return this.replace(/\w/g, (character) => /[a-z]/
+        .test(character) ? character.toUpper() : character.toLower());
+  },
 
-  getMiddle() { },
+  alternatingCase() {
+    return this.replace(/\w/g, (word, i) => (i + 1) % 2 === 0 ?
+    word.toUpper() : word.toLower());
+  },
 
-  numberWords() { },
+  getMiddle() {
+    const middle = this.length / 2;
+    return middle === parseInt(middle, 10) ?
+    this.substr(middle - 1, 2) : this.charAt(middle);
+  },
 
-  isDigit() { },
+  numberWords() {
+    const numWords = {
+      0: 'zero',
+      1: 'one',
+      2: 'two',
+      3: 'three',
+      4: 'four',
+      5: 'five',
+      6: 'six',
+      7: 'seven',
+      8: 'eight',
+      9: 'nine'
+    };
+    return this.replace(/[0-9]/g, digit => `${numWords[digit]} `).trim();
+  },
 
-  doubleCheck() { },
+  isDigit() {
+    return /^\d$/g.test(this);
+  },
+
+  doubleCheck() {
+    return /(.)\1{1}/.test(this);
+  },
 };
 
 Object.assign(String.prototype, stringClass);

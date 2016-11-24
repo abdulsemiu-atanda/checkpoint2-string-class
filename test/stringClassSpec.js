@@ -1,5 +1,3 @@
-require('../src/stringClass');
-
 describe('Has Vowels', () => {
   it('should return true if string contains vowels', () => {
     expect('sheila'.hasVowels()).toBeTruthy();
@@ -74,11 +72,15 @@ describe('To Currency', () => {
   it('should return string in currency format', () => {
     expect('20003.67'.toCurrency()).toEqual('20,003.67');
   });
+
+  it('should return string in currency format with decimal', () => {
+    expect('20003'.toCurrency()).toEqual('20,003.00');
+  });
 });
 
 describe('From Currency', () => {
   it('should return string in number format', () => {
-    expect('20,003.67'.toCurrency()).toEqual('20003.67');
+    expect('20,003.67'.fromCurrency()).toEqual('20003.67');
   });
 });
 
@@ -95,8 +97,12 @@ describe('Alternating case', () => {
 });
 
 describe('Get Middle', () => {
-  it('should return character at the middle of string', () => {
-    expect('read'.getMiddle()).toEqual('a');
+  it('should return character at the middle of string if odd', () => {
+    expect('ready'.getMiddle()).toEqual('a');
+  });
+
+  it('should return two character at the middle of string if even', () => {
+    expect('read'.getMiddle()).toEqual('ea');
   });
 });
 
