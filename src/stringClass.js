@@ -139,7 +139,8 @@ const stringClass = {
       8: 'eight',
       9: 'nine'
     };
-    return this.replace(/[0-9]/g, digit => `${numWords[digit]} `).trim();
+    return this.replace(/[0-9]/g, digit => `${numWords[digit]} `)
+    .replace(/\s+$/, '');
   },
 
 /**
