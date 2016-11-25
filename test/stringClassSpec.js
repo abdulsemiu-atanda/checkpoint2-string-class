@@ -46,6 +46,10 @@ describe('isQuestion', () => {
   it('should return false if string is not a question', () => {
     expect('rhy$th#?m'.isQuestion()).toBeFalsy();
   });
+
+  it('should return false if string contains no word character', () => {
+    expect('???'.isQuestion()).toBeFalsy();
+  });
 });
 
 describe('Words', () => {
@@ -82,6 +86,10 @@ describe('From Currency', () => {
   it('should return string in number format', () => {
     expect('20,003.67'.fromCurrency()).toEqual('20003.67');
   });
+
+  it('should return a number format without insignificant zero', () => {
+    expect('20,003.00'.fromCurrency()).toEqual('20003');
+  });
 });
 
 describe('Inverse case', () => {
@@ -115,6 +123,10 @@ describe('Number words', () => {
 describe('isDigit', () => {
   it('should return true if string is single digit', () => {
     expect('3'.isDigit()).toBeTruthy();
+  });
+
+  it('should return true for digit with sign', () => {
+    expect('+3'.isDigit()).toBeTruthy();
   });
 
   it('should return false for digits more that one', () => {

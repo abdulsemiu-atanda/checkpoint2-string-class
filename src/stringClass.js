@@ -45,7 +45,7 @@ const stringClass = {
    * @return {Boolean} true or false
    */
   isQuestion() {
-    return /\?$/.test(this);
+    return /[\w\s]+(.)\?$/.test(this);
   },
 
 /**
@@ -87,7 +87,7 @@ const stringClass = {
    * @return {String} this
    */
   fromCurrency() {
-    return this.replace(/,/g, '');
+    return this.replace(/(\.00|,)/g, '');
   },
 
 /**
@@ -149,7 +149,7 @@ const stringClass = {
    * @return {Boolean} true or false
    */
   isDigit() {
-    return /^\d$/g.test(this);
+    return /^[-+]?\d$/g.test(this);
   },
 
 /**
