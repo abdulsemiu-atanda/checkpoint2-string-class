@@ -1,6 +1,10 @@
-describe('Has Vowels', () => {
+describe('hasVowels', () => {
   it('should return true if string contains vowels', () => {
     expect('sheila'.hasVowels()).toBeTruthy();
+  });
+
+  it('should case insensitive', () => {
+    expect('shEIla'.hasVowels()).toBeTruthy();
   });
 
   it('should return false for words without vowels', () => {
@@ -8,7 +12,7 @@ describe('Has Vowels', () => {
   });
 });
 
-describe('To Uppercase', () => {
+describe('toUpper', () => {
   it('should return string in all caps', () => {
     expect('sheila'.toUpper()).toEqual('SHEILA');
   });
@@ -18,7 +22,7 @@ describe('To Uppercase', () => {
   });
 });
 
-describe('To Lowercase', () => {
+describe('toLower', () => {
   it('should return all string content in lowercase', () => {
     expect('SHEILA'.toLower()).toEqual('sheila');
   });
@@ -28,7 +32,7 @@ describe('To Lowercase', () => {
   });
 });
 
-describe('Uc First', () => {
+describe('ucFirst', () => {
   it('should return string with first letter in caps', () => {
     expect('sheila'.ucFirst()).toEqual('Sheila');
   });
@@ -52,7 +56,7 @@ describe('isQuestion', () => {
   });
 });
 
-describe('Words', () => {
+describe('words', () => {
   it('should return true if string contains multiple words', () => {
     expect(typeof 'sheila is awesome at her job'.words()).toBe('object');
   });
@@ -67,7 +71,7 @@ describe('Words', () => {
   });
 });
 
-describe('Words count', () => {
+describe('wordCount', () => {
   it('should return number of words in a string', () => {
     expect('sheila is awesome at her job'.wordCount()).toEqual(6);
   });
@@ -77,7 +81,7 @@ describe('Words count', () => {
   });
 });
 
-describe('To Currency', () => {
+describe('toCurrency', () => {
   it('should return string in currency format', () => {
     expect('20003.67'.toCurrency()).toEqual('20,003.67');
   });
@@ -87,7 +91,7 @@ describe('To Currency', () => {
   });
 });
 
-describe('From Currency', () => {
+describe('fromCurrency', () => {
   it('should return string in number format', () => {
     expect('20,003.67'.fromCurrency()).toEqual('20003.67');
   });
@@ -97,19 +101,19 @@ describe('From Currency', () => {
   });
 });
 
-describe('Inverse case', () => {
+describe('inverseCase', () => {
   it('should return string with previously caps to lowercase and viz', () => {
     expect('Mr. Ben'.inverseCase()).toEqual('mR. bEN');
   });
 });
 
-describe('Alternating case', () => {
+describe('alternatingCase', () => {
   it('should return string with cases interchanged', () => {
     expect('Onomatopoeia'.alternatingCase()).toEqual('oNoMaToPoEiA');
   });
 });
 
-describe('Get Middle', () => {
+describe('getMiddle', () => {
   it('should return character at the middle of string if odd', () => {
     expect('ready'.getMiddle()).toEqual('a');
   });
@@ -119,7 +123,7 @@ describe('Get Middle', () => {
   });
 });
 
-describe('Number words', () => {
+describe('numberWords', () => {
   it('should return numbers as words', () => {
     expect('325'.numberWords()).toEqual('three two five');
   });
@@ -139,7 +143,7 @@ describe('isDigit', () => {
   });
 });
 
-describe('Double Check', () => {
+describe('doubleCheck', () => {
   it('should return true if character occurs twice', () => {
     expect('aa'.doubleCheck()).toBeTruthy();
   });
