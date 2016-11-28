@@ -1,7 +1,7 @@
 const stringClass = {
   /**
    * This method takes a string and tests if it contains vowels
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {Boolean} true or false
    */
   hasVowels() {
@@ -10,7 +10,7 @@ const stringClass = {
 
 /**
    * This method takes a string and returns it in uppercase
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   toUpper() {
@@ -21,7 +21,7 @@ const stringClass = {
 
 /**
    * This method takes a string and returns it in lowercase
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   toLower() {
@@ -32,7 +32,7 @@ const stringClass = {
 
 /**
    * This method takes a string and returns its first letter in uppercase
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   ucFirst() {
@@ -41,7 +41,7 @@ const stringClass = {
 
 /**
    * This method takes a string and checks if it's a question
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {Boolean} true or false
    */
   isQuestion() {
@@ -50,7 +50,7 @@ const stringClass = {
 
 /**
    * This method takes a string and check if it has multiple words
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {Array} array
    */
   words() {
@@ -58,7 +58,7 @@ const stringClass = {
   },
 /**
    * This method takes a string and returns the number of words it contains
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {Integer} number
    */
   wordCount() {
@@ -67,7 +67,7 @@ const stringClass = {
 
 /**
    * This method takes a string in float type and returns it in currency format
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   toCurrency() {
@@ -83,7 +83,7 @@ const stringClass = {
 
 /**
    * This method takes a string in currency format and converts to float type
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   fromCurrency() {
@@ -92,7 +92,7 @@ const stringClass = {
 
 /**
    * This method takes a string and make lowercase letter uppercase and viz
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   inverseCase() {
@@ -102,7 +102,7 @@ const stringClass = {
 
 /**
    * This method takes a string and returns it with cases interchanged
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   alternatingCase() {
@@ -112,7 +112,7 @@ const stringClass = {
 
 /**
    * This method takes a string and returns character at the middle
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   getMiddle() {
@@ -123,7 +123,7 @@ const stringClass = {
 
 /**
    * This method takes a string in numbers and returns as words
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {String} this
    */
   numberWords() {
@@ -145,7 +145,7 @@ const stringClass = {
 
 /**
    * This method takes a string and checks if it's a single digit
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {Boolean} true or false
    */
   isDigit() {
@@ -154,7 +154,7 @@ const stringClass = {
 
 /**
    * This method takes a string and checks if character occurs twice
-   * @param {String} this
+   * It extends the String.prototype to achieve this
    * @return {Boolean} true or false
    */
   doubleCheck() {
