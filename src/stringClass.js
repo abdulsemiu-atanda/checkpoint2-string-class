@@ -5,7 +5,7 @@ const stringClass = {
    * @return {Boolean} true or false
    */
   hasVowels() {
-    return /[aeiou]/.test(this);
+    return /[aeiou]/i.test(this);
   },
 
   /**
