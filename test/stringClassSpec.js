@@ -60,6 +60,11 @@ describe('Words', () => {
   it('should return array if string contains multiple words', () => {
     expect(Array.isArray('sheila is awesome at her job'.words())).toBeTruthy();
   });
+
+  it('should return true if string contains multiple words', () => {
+    const result = ['sheila','is','awesome','at','her','job'];
+    expect('sheila is awesome at her job'.words()).toEqual(result);
+  });
 });
 
 describe('Words count', () => {
