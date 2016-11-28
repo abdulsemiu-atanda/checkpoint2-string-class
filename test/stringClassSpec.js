@@ -1,5 +1,3 @@
-require('../src/stringClass');
-
 describe('Has Vowels', () => {
   it('should return true if string contains vowels', () => {
     expect('sheila'.hasVowels()).toBeTruthy();
@@ -48,6 +46,10 @@ describe('isQuestion', () => {
   it('should return false if string is not a question', () => {
     expect('rhy$th#?m'.isQuestion()).toBeFalsy();
   });
+
+  it('should return false if string contains no word character', () => {
+    expect('???'.isQuestion()).toBeFalsy();
+  });
 });
 
 describe('Words', () => {
@@ -57,6 +59,11 @@ describe('Words', () => {
 
   it('should return array if string contains multiple words', () => {
     expect(Array.isArray('sheila is awesome at her job'.words())).toBeTruthy();
+  });
+
+  it('should return true if string contains multiple words', () => {
+    const result = ['sheila','is','awesome','at','her','job'];
+    expect('sheila is awesome at her job'.words()).toEqual(result);
   });
 });
 
@@ -74,11 +81,19 @@ describe('To Currency', () => {
   it('should return string in currency format', () => {
     expect('20003.67'.toCurrency()).toEqual('20,003.67');
   });
+
+  it('should return string in currency format with decimal', () => {
+    expect('20003'.toCurrency()).toEqual('20,003.00');
+  });
 });
 
 describe('From Currency', () => {
   it('should return string in number format', () => {
-    expect('20,003.67'.toCurrency()).toEqual('20003.67');
+    expect('20,003.67'.fromCurrency()).toEqual('20003.67');
+  });
+
+  it('should return a number format without insignificant zero', () => {
+    expect('20,003.00'.fromCurrency()).toEqual('20003');
   });
 });
 
@@ -95,8 +110,12 @@ describe('Alternating case', () => {
 });
 
 describe('Get Middle', () => {
-  it('should return character at the middle of string', () => {
-    expect('read'.getMiddle()).toEqual('a');
+  it('should return character at the middle of string if odd', () => {
+    expect('ready'.getMiddle()).toEqual('a');
+  });
+
+  it('should return two character at the middle of string if even', () => {
+    expect('read'.getMiddle()).toEqual('ea');
   });
 });
 
@@ -111,6 +130,10 @@ describe('isDigit', () => {
     expect('3'.isDigit()).toBeTruthy();
   });
 
+  it('should return true for digit with sign', () => {
+    expect('+3'.isDigit()).toBeTruthy();
+  });
+
   it('should return false for digits more that one', () => {
     expect('37'.isDigit()).toBeFalsy();
   });
@@ -123,5 +146,9 @@ describe('Double Check', () => {
 
   it('should return false if character does not repeat', () => {
     expect('a'.doubleCheck()).toBeFalsy();
+  });
+
+  it('should return true for double whitespaces', () => {
+    expect('  '.doubleCheck()).toBeTruthy();
   });
 });
