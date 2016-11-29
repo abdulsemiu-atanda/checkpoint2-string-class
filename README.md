@@ -4,6 +4,9 @@
 ## String Class
 This application extends javacript's `String.prototype` methods
 
+## Testing
+To test this application, run `npm test`
+
 ## Contributing
 
 - Fork this repositry to your account.
