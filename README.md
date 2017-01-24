@@ -42,12 +42,11 @@ The following methods have been added to javacript's `String.prototype`
 - You should have [NodeJs](https://nodejs.org) installed on your machine
 - Clone your repositry: `git clone git@github.com:andela-aatanda/string-class.git`
 - Install dependencies with `npm install`
-- 
 
 ## Contributing
 
 - Fork this repositry to your account.
-- Clone your repositry: `git clone git@github.com:andela-aatanda/string-class.git`
+- Clone your repositry: `git clone git@github.com:your-username/string-class.git`
 - Create your feature branch: `git checkout -b new-feature`
 - Commit your changes: `git commit -m "did something"`
 - Push to the remote branch: `git push origin new-feature`
