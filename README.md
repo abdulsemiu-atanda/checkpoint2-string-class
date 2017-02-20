@@ -40,7 +40,7 @@ The following methods have been added to javacript's `String.prototype`
 
 ## Usage
 - You should have [NodeJs](https://nodejs.org) installed on your machine
-- Clone your repositry: `git clone git@github.com:andela-aatanda/string-class.git`
+- Clone this repositry: `git clone git@github.com:andela-aatanda/string-class.git`
 - Install dependencies with `npm install`
 
 ## Contributing
